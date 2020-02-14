@@ -1,24 +1,11 @@
-local isDead
-local isSeparated
-local isRetired
+local debounce = false
 
-local function getPayAmount()
-	local result
-	
-	if isDead then
-		result = 1000
-	else
-		if isSeparated then
-			result = 1500
-		else
-			if isRetired then
-				result = 2000
-				
-			else
-				result = 500
-			end
-		end
-	end
-	
-	return result
+local function doSomeStuff()
+    if not debounce then
+        debounce = true
+
+        -- Do the rest of your stuff here
+
+        debounce = false
+    end
 end
